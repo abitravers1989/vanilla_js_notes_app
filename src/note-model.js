@@ -1,9 +1,11 @@
-(function(){
+(function(exports){
   var EXCALM = 5
 
   function exclaim(string){
     return string + "!".repeat(EXCALM);
   };
 
-  console.log(exclaim("hi"));
-})();
+  exports.exclaim = exclaim;
+})(this);
+
+console.log(exclaim("hi"));
