@@ -1,11 +1,16 @@
-(function(exports){
-  var EXCALM = 5
 
-  function exclaim(string){
-    return string + "!".repeat(EXCALM);
+(function(exports){
+  function Note(textInput){
+    this.text = textInput;
   };
 
-  exports.exclaim = exclaim;
+  Note.prototype.returnText = function(){
+    return this.text
+  };
+
+  exports.Note = Note;
+
 })(this);
 
-console.log(exclaim("hi"));
+note = new Note("hiii");
+note.returnText();
